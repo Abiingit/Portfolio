@@ -8,12 +8,13 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer>
-    function toggleMenu() {
-       const menu = document.getElementById('mobile-menu');
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('scale-y-100');
     menu.classList.toggle('scale-y-0');
-    }
+  }
   </script>
+ <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 <body class="bg-[linear-gradient(_#343434,_#242424,_#000)] text-white">
@@ -34,8 +35,8 @@
       class="absolute top-10 w-[90vw] right-10 max-w-xs bg-[#60519b]/20 backdrop-blur-md shadow-lg p-4 flex flex-col space-y-4 text-center uppercase text-xs tracking-widest transform scale-y-0 origin-top transition-transform duration-300 ease-in-out z-50">
       <a href="#About_me" class="hover:underline">About</a>
       <a href="#Skills" class="hover:underline">Skills</a>
-      <a href="#" class="hover:underline">Services</a>
       <a href="#" class="hover:underline">Projects</a>
+      <a href="#" class="hover:underline">Resume</a>
       <a href="#" class="hover:underline">Contact</a>
     </nav>
   </div>
@@ -44,8 +45,8 @@
   <nav class="hidden md:flex space-x-8 uppercase text-sm tracking-widest">
     <a href="#About_me" class="navList">About</a>
     <a href="#Skills" class="navList">Skills</a>
-    <a href="#" class="navList">Services</a>
     <a href="#" class="navList">Projects</a>
+    <a href="#" class="navList">Resume</a>
     <a href="#" class="navList">Contact</a>
   </nav>
 </header>
@@ -100,8 +101,19 @@
       </div>
       
       <!-- Right: Text + Skills -->
-      <div class="md:w-1/2 space-y-6">
-        <h3 class="font-semibold text-sm">— ABOUT ME</h3>
+      <div class="md:w-1/2 space-y-3">
+      <div class="relative w-full h-32 sm:h-30 md:h-38 lg:h-40 flex items-center">
+  <!-- Giant background letter -->
+  <h1 class="absolute text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-bold text-[#ccc] opacity-10 leading-none z-0">
+    A
+  </h1>
+
+  <!-- Foreground title -->
+  <h2 class="relative text-xl sm:text-2xl md:text-3xl font-semibold z-10 mt-16">
+    — ABOUT ME
+  </h2>
+</div>
+
         <h2 class="text-3xl font-bold text-[#60519b]">Who Am I</h2>
         <p class="text-gray-300 text-2xl">
           My name is Abirami. I'm a passionate Full Stack Developer currently based in Erode,TamilNadu.
@@ -190,18 +202,237 @@
 
 <section class="relative overflow-hidden min-h-screen flex items-center justify-center bg-[#19171b] text-white">
   <!-- Background Circle -->
-  <div class="absolute left-[-100px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#60519b] rounded-full blur-[120px] opacity-30 z-0"></div>
+  <div class="absolute left-[-100px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#60519b] rounded-full blur-[120px] opacity-30 z-0" style="animation:circleMove 3s ease-in-out;"></div>
   <div class="absolute right-[-100px] top-0 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#60519b] rounded-full blur-[120px] opacity-30 z-0"></div>
 
   <!-- Content -->
-  <div class="relative z-10 p-10 text-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">My Skills</h1>
-    <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
-      This section has a dreamy blurred circle background, floating on the right 🌙✨
-    </p>
+<section class="text-white w-full py-10 px-6" id="skills">
+  <div class="relative w-full h-32 sm:h-30 md:h-38 lg:h-40 flex items-center">
+  <!-- Giant background letter -->
+  <h1 class="absolute text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-bold text-[#ccc] opacity-10 leading-none z-0">
+    S
+  </h1>
+
+  <!-- Foreground title -->
+  <h2 class="relative text-xl sm:text-2xl md:text-3xl font-semibold z-10 mt-16">
+    — SKILLS
+  </h2>
+</div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mx-auto">
+    
+    <!--Skill:HTML-->
+    <div class="skill-item">
+    <div class="relative w-50 h-50 mb-3">
+      <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="10" fill="none" />
+        <circle class="progress" data-percent="90" cx="50" cy="50" r="40" stroke="#60519b" stroke-width="10" fill="none" />
+      </svg>
+      <div class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">90%</div>
+    </div>
+    <p class="text-xl text-center mt-1 text-white">HTML</p>
+  </div>
+
+
+    <!-- Skill: CSS -->
+    <div class="skill-item">
+      <div class="relative w-50 h-50 mb-3">
+        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="10" fill="none"/>
+          <circle class="progress" data-percent="90" cx="50" cy="50" r="40" stroke="#60519b" stroke-width="10" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="40" stroke-linecap="round"/>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">90%</div>
+      </div>
+      <p class="text-xl text-center mt-1">CSS</p>
+    </div>
+
+     <div class="skill-item">
+      <div class="relative w-50 h-50 mb-3">
+        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="10" fill="none"/>
+          <circle  class="progress" data-percent="70" cx="50" cy="50" r="40" stroke="#60519b" stroke-width="10" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="75" stroke-linecap="round"/>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">70%</div>
+      </div>
+      <p class="text-xl text-center mt-1">Tailwind CSS</p>
+    </div>
+
+    <!-- Skill: JavaScript -->
+    <div class="skill-item">
+      <div class="relative w-50 h-50 mb-3">
+        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="10" fill="none"/>
+          <circle class="progress" data-percent="75" cx="50" cy="50" r="40" stroke="#60519b" stroke-width="10" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="75" stroke-linecap="round"/>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">70%</div>
+      </div>
+      <p class="text-xl text-center mt-1">JavaScript</p>
+    </div>
+
+    <!-- Skill: React -->
+    <div class="skill-item">
+      <div class="relative w-50 h-50 mb-3">
+        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="10" fill="none"/>
+          <circle class="progress" data-percent="75" cx="50" cy="50" r="40" stroke="#60519b" stroke-width="10" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="63" stroke-linecap="round"/>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">75%</div>
+      </div>
+      <p class="text-xl text-center mt-1">React</p>
+    </div>
+
+    <div class="skill-item">
+      <div class="relative w-50 h-50 mb-3">
+        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="10" fill="none"/>
+          <circle class="progress" data-percent="50" cx="50" cy="50" r="40" stroke="#60519b" stroke-width="10" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="125" stroke-linecap="round"/>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center text-xl font-bold">50%</div>
+      </div>
+      <p class="text-xl text-center mt-1">React Native</p>
+    </div>
+
   </div>
 </section>
 
+
+
+</section>
+
+<section class="" id="resume-timeline">
+  <div class="container max-w-full py-20 " >
+  <div class="relative w-full h-32 sm:h-30 md:h-38 lg:h-40 p-10 z-10 flex items-center">
+  <!-- Giant background letter -->
+  <h1 class="absolute text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-bold text-[#ccc] opacity-10 leading-none z-0">
+    R
+  </h1>
+
+  <!-- Foreground title -->
+  <h2 class="relative text-xl sm:text-2xl md:text-3xl font-semibold z-10 mt-16">
+    — RESUME
+  </h2>
+</div>
+  <div class="max-w-4xl px-4 mx-auto">
+    <div class="relative">
+      <!-- Timeline vertical line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-[#60519b] z-0"></div>
+      
+      <!-- Timeline Item 1 -->
+      <div class="mb-16 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-right">
+        <!-- Left Side (icon) -->
+        <div class="md:w-1/2 md:pr-8 flex justify-end md:justify-center">
+          <div class="bg-[#60519b] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-4 border-white text-2xl">
+            <!-- User Icon -->
+            <svg class="w-8 h-8" fill="none" stroke="#bfc0d1" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V5a4 4 0 00-8 0v2a4 4 0 008 0z" />
+            </svg>
+          </div>
+        </div>
+        <!-- Right Side (content) -->
+        <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
+          <div class="bg-transparent backdrop-blur-md  p-6 rounded-sm shadow-lg border-l-4 border-[#60519b]">
+            <h3 class="text-2xl font-semibold text-[#bfc0d1]">B.E in Computer Science</h3>
+            <span class="block text-gray-500 dark:text-gray-400 text-sm mb-2">KSR College of Engineering &mdash; 2022–Present</span>
+            <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 text-base">
+              <li>CGPA: 8.9/10.</li>
+              <li>Active in doing projects and attending hackathons</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 2 -->
+      <div class="mb-16 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-left">
+        <!-- Left Side (content) -->
+        <div class="md:w-1/2 md:pr-8 order-2 md:order-1 mt-8 md:mt-0">
+          <div class="bg-transparent backdrop-blur-md  p-6 rounded-sm shadow-lg border-l-4 border-[#60519b]">
+            <h3 class="text-2xl font-semibold text-[#bfc0d1]">React Native developer Intern</h3>
+            <span class="block text-gray-500 dark:text-gray-400 text-sm mb-2">Hertzworkz Pvt.Ltd.&mdash; 2024–2025</span>
+            <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 text-base">
+              <li>Assisted in building company website.</li>
+              <li>Assisted in building two E-Commerce apps(Eggspro & TPMills)</li>
+            </ul><br>
+            <h3 class="text-2xl font-semibold text-[#bfc0d1]">AI-ML Internship</h3>
+            <span class="block text-gray-500 dark:text-gray-400 text-sm mb-2">TANSAM.&mdash; 2024(15 days)</span>
+            <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 text-base">
+              <li>Learned about Machine Learning Models.</li>
+              <li>Developed a face recognition ML Model that recognizes emotions of the face.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Side (icon) -->
+        <div class="md:w-1/2 md:pl-8 order-1 md:order-2 flex justify-start md:justify-center">
+          <div class="bg-[#60519b] text-[#bfc091] w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-4 border-[#bfc0d1] text-2xl">
+            <!-- Clock Icon -->
+            <svg class="w-8 h-8" fill="none" stroke="#bfc0d1" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 3 -->
+      <div class="mb-16 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-right">
+        <!-- Left Side (icon) -->
+        <div class="md:w-1/2 md:pr-8 flex justify-end md:justify-center">
+          <div class="bg-[#60519b] text-[#bfc0d1] w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-4 border-[#bfc0d1] text-2xl">
+            <!-- Book Icon -->
+            <svg class="w-8 h-8" fill="none" stroke="#bfc0d1" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+            </svg>
+          </div>
+        </div>
+        <!-- Right Side (content) -->
+        <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
+          <div class="bg-transparent backdrop-blur-md  p-6 rounded-sm shadow-lg border-l-4 border-[#60519b]">
+            <h3 class="text-2xl font-semibold text-[#bfc0d1]">Higher Secondary Certificate </h3>
+            <span class="block text-gray-500 dark:text-gray-400 text-sm mb-2">Rajendran Matric. Higher. Secondary School &mdash; 2021-2022</span>
+            <ul class="list-disc ml-6 text-gray-700 dark:text-gray-300 text-base">
+              <li>Graduated with a percentage of 86.5</li>
+              <li>Studied in Computer Science and Maths</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 4 (Skills) -->
+      <div class="mb-0 flex flex-col md:flex-row items-center relative z-10" data-aos="fade-left">
+        <!-- Left Side (content) -->
+        <div class="md:w-1/2 md:pr-8 order-2 md:order-1 mt-8 md:mt-0">
+          <div class="bg-transparent backdrop-blur-md  p-6 rounded-sm shadow-lg border-l-4 border-[#60519b]">
+            <h3 class="text-2xl font-semibold text-[#bfc0d1]">Skills</h3>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">HTML</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">CSS</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">JavaScript</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">Tailwind CSS</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">React</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">React Native</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">Python</span>
+              <span class="bg-[#60519b] text-[#bfc0d1] px-3 py-1 rounded-md text-sm font-semibold">Java</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right Side (icon) -->
+        <div class="md:w-1/2 md:pl-8 order-1 md:order-2 flex justify-start md:justify-center">
+          <div class="bg-[#60519b] text-[#bfc0d1] w-14 h-14 rounded-full flex items-center justify-center shadow-lg border-4 border-[#bfc0d1] text-2xl">
+            <!-- Play Icon -->
+            <svg class="w-8 h-8" fill="none" stroke="#bfc0d1" stroke-width="2" viewBox="0 0 24 24">
+              <polygon points="9.75 17 15.25 12 9.75 7 9.75 17" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!--projects-->
 
@@ -288,9 +519,48 @@
   
     </div>
   </section>
+
+<!-- AOS JS CDN -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    once: false,
+    easing: 'ease-in-out'
+  });
+</script>
+
+
   
-  
-  
-  <h1 class="text-4xl font-bold text-center mt-10">Hello, I'm ABI 👩‍💻</h1>
+    <script defer>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const circle = entry.target.querySelector('.progress');
+
+      if (circle) {
+        const percent = parseInt(circle.getAttribute('data-percent')) || 0;
+        const offset = 251.2 - (251.2 * percent) / 100;
+
+        if (entry.isIntersecting) {
+          circle.style.strokeDashoffset = offset;
+        } else {
+          // Reset it when out of view
+          circle.style.strokeDashoffset = 251.2;
+        }
+      }
+    });
+  }, {
+    threshold: 0.6, // adjust if needed
+  });
+
+  document.querySelectorAll('.skill-item').forEach(item => {
+    observer.observe(item);
+  });
+});
+
+
+  </script>
+
 </body>
 </html>
