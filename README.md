@@ -45,8 +45,8 @@ portfolio/
 You can clone this repo and customize it as your own:
 
 ```bash
-git clone https://github.com/yourusername/abi-portfolio.git
-cd abi-portfolio
+git clone https://github.com/Abiingit/Portfolio.git
+cd Portfolio
 ```
 
 Then open `index.html` in your favorite browser. That's it. No build tools, no fuss.
