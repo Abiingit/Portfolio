@@ -4,6 +4,8 @@
 body{
    font-family: "Architects Daughter", cursive;
    color:#bfc0d1;
+   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
 }
 
 .navList{
@@ -248,6 +250,14 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 .container > * {
   position: relative;
   z-index: 1;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 2px;
+  box-shadow: 70px, 70px rgb(10, 9, 14);
+  
 }
 
 
