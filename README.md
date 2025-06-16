@@ -17,19 +17,6 @@ This is my personal portfolio website, handcrafted with 💜 using **HTML**, **T
 
 ---
 
-## 📁 Project Structure
-
-```
-portfolio/
-├── images/                  # All images, logos, and animations
-├── index.html               # Main HTML file
-├── styles/                  # Tailwind CSS setup or extra styles
-├── scripts/                 # Custom JS (like menu toggle, preloader, form)
-└── README.md                # This file
-```
-
----
-
 ## 🛠️ Tech Stack
 
 * **HTML5** – Semantic structure
