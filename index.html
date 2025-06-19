@@ -68,7 +68,7 @@
       <a href="#About_me" class="hover:underline">About</a>
       <a href="#skills" class="hover:underline">Skills</a>
       <a href="#services" class="hover:underline">Services</a>
-      <a href="#resume" class="hover:underline">Education</a>
+      <a href="#resume" class="hover:underline">Journey</a>
       <a href="#contact" class="hover:underline">Contact</a>
     </nav>
   </div>
@@ -78,7 +78,7 @@
     <a href="#About_me" class="navList">About</a>
     <a href="#skills" class="navList">Skills</a>
     <a href="#services" class="navList">Services</a>
-    <a href="#resume" class="navList">Education</a>
+    <a href="#resume" class="navList">Journey</a>
     <a href="#contact" class="navList">Contact</a>
   </nav>
 </header>
@@ -361,12 +361,12 @@
   <div class="relative w-full h-32 sm:h-30 md:h-38 lg:h-40 p-10 z-10 flex items-center">
   <!-- Giant background letter -->
   <h1 class="absolute text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-bold text-[#ccc] opacity-10 leading-none z-0">
-    E
+    J
   </h1>
 
   <!-- Foreground title -->
   <h2 class="relative text-xl sm:text-2xl md:text-3xl font-semibold z-10 mt-16">
-    — EDUCATION
+    — JOURNEY
   </h2>
 </div>
   <div class="max-w-4xl px-4 mx-auto">
@@ -605,26 +605,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent actual form submission
+  document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent the default form behavior
 
-    Swal.fire({
-  title: 'Message Sent!',
-  text: 'Thanks for reaching out, Abi will vibe with you soon',
-  icon: 'success',
-  confirmButtonText: 'Okay',
-  background:'transparent', // semi-transparent dark
-  color: '#fff',
-  confirmButtonColor: '#60519b',
-  customClass: {
-    popup: 'backdrop-blur'
-  }
-});
+    const form = e.target;
+    const formData = new FormData(form);
 
-    // Optional: clear form after alert
-    this.reset();
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        Swal.fire({
+          title: 'Message Sent!',
+          text: 'Thanks for reaching out, Abi will vibe with you soo',
+          icon: 'success',
+          confirmButtonText: 'Cool!',
+          background: 'rgba(0, 0, 0, 0.6)',
+          color: '#fff',
+          confirmButtonColor: '#60519b',
+          customClass: {
+            popup: 'backdrop-blur'
+          }
+        });
+
+        form.reset(); // Clear the form
+      } else {
+        throw new Error('Formspree error');
+      }
+    } catch (error) {
+      Swal.fire({
+        title: 'Oops!',
+        text: 'Something went wrong. Try again later.',
+        icon: 'error',
+        confirmButtonText: 'Okay'
+      });
+    }
   });
 </script>
+
 
 
 </body>
